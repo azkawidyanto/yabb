@@ -1,0 +1,15 @@
+.container{
+    background-color:bisque;
+    max-width: 100%;
+    margin-top: 20px;
+    padding:40px;
+    border: 1px solid;
+    border-radius:20px;
+    img{
+
+    }
+
+    h2{
+
+    }
+}
