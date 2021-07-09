@@ -1,14 +1,36 @@
-const students =[
-    {name:"Alice",age:"20"},
-    {name:"John". age:"20"},
-    {name:"bill",age:"20"},
-    {name:"james". age:"20"},
-]
+const students = [
+  {
+    name: "Alice",
+    age: 20
+  },
+  {
+    name: "Bob",
+    age: 21
+  },
+  {
+    name: "Jane",
+    age: 20
+  }
+];
 
-var table = document.createElement("table");   
-table.setAttribute( "name","age");
-var row = table.insertRow(students.length);
+const renderTable = () => {
+  students.forEach(({ name, age }) => {
+    const table = document
+      .getElementById("data")
+      .getElementsByTagName("tbody")[0];
 
-for
+    //stackoverflow
+    table.insertRow().innerHTML = `<td>${name}</td><td>${age}</td>`;
+  });
+};
 
-document.body.appendChild(table); 
+//run render table
+renderTable();
+
+
+const calcAvgAge = (students) => {
+    const total = students.reduce((acc, student) => acc + student.age, 0);
+    return total/student.length;
+};
+
+document.getElementById("calcButton").addEventListener("click", handleClick);
